@@ -89,7 +89,9 @@ function scrollBgImage() {
       // Код будет срабатывать раз в 0.2 секунд
     document.addEventListener('scroll', throttle(function() {
         moveToRight(bgImage, html.scrollTop, bgImageRight);
-        moveToRight(bgImage, body.scrollTop, bgImageRight);
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+            moveToRight(bgImage, body.scrollTop, bgImageRight);     //Safari
+        }
     }, 200))
 
     // ограничение операций scroll
