@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libs/noUiSlider/nouislider.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Тестовое задание - программист</title>
+</head>
+
+<body>
+    <header>
+        <div class="hamburger">
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+        </div>
+        <div class="header">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Логотип">
+                </a>
+            </div>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item nav__item-dropdown" id="menu">
+                        <a class="nav__link">Меню</a>
+                        <div class="nav__dropdown">
+                            <div class="nav__dropdown-close"></div>
+                            <ul class="nav__dropdown-list">
+                            <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Услуги</a></li>
+                            <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Статьи</a></li>
+                            <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Вакансии</a></li>
+                            <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Франшиза</a></li>
+                        </ul>
+                        </div>
+                        
+                    </li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Портфолио</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Цены</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Схема работы</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Отзывы</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#">Гарантия</a></li>
+                </ul>
+            </nav>
+            <div class="header__right">
+                <div class="btn-wrapper">
+                    <div class="header__btn btn">Обратный звонок</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main__container">    
+        <section class="main">
+            <div class="main__bg-image"></div>
+            <div class="main__blocks-wrapper">
+                <div class="main__block">
+                    <h1 class="main__title">Ремонт под ключ от <br> 2900 руб/м2.</h1>
+                    <div class="main__subtitle">При заказе ремонта делаем дизайн-проект в подарок</div>
+                    <div class="main__subtitle-underline"></div>
+                    <div class="main__advantages advantages">
+                        <div class="advantages__block">
+                            <img src="images/icons/checked-truck.svg" alt="Бесплатный выезд" class="advantages__icon">
+                            <div class="advantages__text">Бесплатный выезд в день обращения</div>
+                        </div>
+                        <div class="advantages__block">
+                            <img src="images/icons/guarantee.svg" alt="Гарантия на работу" class="advantages__icon">
+                            <div class="advantages__text">Гарантия на работу до 5 лет</div>
+                        </div>
+                        <div class="advantages__block">
+                            <img src="images/icons/time-management.svg" alt="Соблюдение сроков" class="advantages__icon">
+                            <div class="advantages__text">Жесткое соблюдение сроков</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block">
+                    <form class="main__form form">
+                        <div class="form__title">Рассчитайте <br> стоимость ремонта</div>
+                        <div class="form__block-title">
+                            Площадь квартиры:
+                            <div id="sliderValue" class="slider-value"></div>
+                        </div>
+                        <div class="form__block">
+                            <div class="slidecontainer">
+                                <div class="slider" id="slider-square"></div>
+                            </div>
+                        </div>
+                            <div class="form__block-title">Тип жилья:</div>
+                            <div class="form__block">
+                                <div class="form__radio">
+                                    <div class="form__radio-item">
+                                        <input class="form__radio-input" type="radio" id="second" name="type" value="second" />
+                                        <label for="second">Вторичное <br> жилье</label>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="form__radio-item">
+                                        <input class="form__radio-input" type="radio" id="new" name="type" value="new" />
+                                        <label for="new">Новостройка</label>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="form__radio-item">
+                                        <input class="form__radio-input" type="radio" id="office" name="type" value="office" />
+                                        <label for="office">Офис</label>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="form__block-title">Кол-во комнат:</div>
+                        <div class="form__block">
+                            <div class="form__radio">
+                                <div class="form__radio-item">
+                                    <input class="form__radio-input" type="radio" id="1" name="rooms" value="1" />
+                                    <label for="1">1</label>
+                                </div>
+                            </div>
+                            <div class="form__radio">
+                                <div class="form__radio-item">
+                                    <input class="form__radio-input" type="radio" id="2" name="rooms" value="2" />
+                                    <label for="2">2</label>
+                                </div>
+                            </div>
+                            <div class="form__radio">
+                                <div class="form__radio-item">
+                                    <input class="form__radio-input" type="radio" id="3+" name="rooms" value="3+" />
+                                    <label for="3+">3+</label>
+                                </div>
+                            </div>
+                            <div class="form__radio">
+                                <div class="form__radio-item">
+                                    <input class="form__radio-input" type="radio" id="studio" name="rooms" value="studio" />
+                                    <label for="studio">Студия</label>
+                                </div>  
+                            </div>
+                            
+                        </div>
+                        <div class="btn-wrapper">
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="main__scroll">
+                <div class="main__scroll-arrow"></div>
+                <span class="main__scroll-text">Scroll</span>
+            </div>
+            
+        </section>
+    </div>
+
+    
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Укажите почту, и мы с вами свяжемся</div>
+            <form class="modal__form">
+                <input type="email" class="modal__input" name="user_email" placeholder="Ваша почта">
+                <div class="btn-wrapper">
+                    <button type="submit" class="modal__btn btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <button class="modal-trigger btn">Отправить почту</button>
+    </footer>
+
+
+
+    <script src="libs/noUiSlider/nouislider.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
